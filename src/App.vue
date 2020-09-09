@@ -29,10 +29,7 @@ export default {
 <style lang="scss" scoped>
 #app {
   font-family: 'Montserrat', sans-serif;
-
-  // border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
-  min-height: 100vh;
 }
 </style>
