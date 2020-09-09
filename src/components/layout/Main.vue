@@ -1,18 +1,21 @@
 <template>
   <main class="main-content">
     <Summary :text="profileSummary" />
+    <EmploymentHistory :data="workHistory" />
   </main>
 </template>
 
 <script>
 import Summary from '../content/Summary';
+import EmploymentHistory from '../content/EmploymentHistory';
 
-import { profile } from '../../data';
+import { profile, work } from '../../data';
 export default {
-  components: { Summary },
+  components: { Summary, EmploymentHistory },
   data() {
     return {
       profileSummary: profile,
+      workHistory: work,
     };
   },
 };
