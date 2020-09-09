@@ -1,15 +1,18 @@
 <template>
   <div class="education">
     <h2>Education</h2>
-    <div v-for="(item, i) in schools" :key="i">
+
+    <div v-for="(item, i) in schools" :key="i" class="education__school">
       <div class="education__top">
         <h4 class="education__degree">
           {{ item.degree }}, {{ item.institution }}
         </h4>
+
         <div class="education__city">
           {{ item.city }}
         </div>
       </div>
+
       <div class="education__date">
         {{ item.date }}
       </div>
@@ -30,9 +33,11 @@ export default {
 
 <style lang="scss" scoped>
 .education {
-  &:first-of-type {
-    h4 {
-      margin-top: 0;
+  &__school {
+    &:first-of-type {
+      h4 {
+        margin-top: 0;
+      }
     }
   }
 
