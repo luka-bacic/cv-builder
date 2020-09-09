@@ -3,7 +3,7 @@ export const name = 'Luka Bacic';
 export const job = 'Front end developer';
 
 export const address =
-  '16 Jenkinson Street, 2904 Monash, Canberra, ACT, Australia';
+  '16 Jenkinson Street, 2904 Monash, Canberra ACT, Australia';
 
 export const phone = '+61 416 671 781';
 
@@ -40,20 +40,72 @@ export const profile =
 // Work experience
 export const work = [
   {
-    position: 'Web dev',
-    company: 'Cordelta',
+    position: 'Front end developer',
+    company: 'Cordelta Digital',
     city: 'Canberra',
     date: 'March 2020 — present',
-    duties: ['one', 'two', 'three'],
+    duties: [
+      'Modify Drupal themes',
+      'Develop Vue modules',
+      'Create JS animations',
+    ],
+  },
+  {
+    position: 'Donation sorter',
+    company: 'St Vincent de Paul',
+    city: 'Canberra',
+    date: 'February 2020 — March 2020',
+    duties: [
+      'Accept and sort donations',
+      'Greet and instruct customers',
+      'Clean facility',
+    ],
+  },
+  {
+    position: 'Freelance web developer',
+    company: null,
+    city: null,
+    date: 'September 2019 — present',
+    duties: ['Develop custom WordPress themes'],
+  },
+  {
+    position: 'Front end developer - intern',
+    company: 'AxiomQ',
+    city: 'Novi Sad',
+    date: 'March 2019 — July 2019',
+    duties: [
+      'Modify custom WordPress themes',
+      'Develop and debug HTML emails',
+      'Integrate landing pages in Hubspot and Marketo',
+    ],
+  },
+  {
+    position: 'Volunteer',
+    company: 'Local Zoo',
+    city: 'Subotica',
+    date: 'November 2013 — December 2013',
+    duties: ['Rack leaves', 'Help administering medicine to reptiles'],
   },
 ];
 
 // Education
 export const schools = [
   {
+    degree: 'Web design',
+    institution: 'Higher Technical School of Professional Studies',
+    city: 'Novi Sad',
+    date: 'September 2016 — June 2019',
+  },
+  {
     degree: 'Bachelor of Information Technology',
     institution: 'Australian National University',
     city: 'Canberra',
     date: 'July 2014 — June 2015',
+  },
+  {
+    degree: 'General studies',
+    institution: 'Grammar school "Svetozar Markovic"',
+    city: 'Subotica',
+    date: 'September 2010 - June 2014',
   },
 ];
