@@ -1,8 +1,14 @@
 <template>
   <header class="header">
-    <div class="header__wrap">
+    <div class="header__photo">
+      <img
+        src="https://i.picsum.photos/id/866/150/150.jpg?hmac=p6Qy476cgeZxVZMIFJmLW3x8SQSjGCkjzoPEKAKQ1Os"
+        alt=""
+      />
+    </div>
+    <div class="header__name-box">
       <h1 class="header__name">{{ name }}</h1>
-      <div class="header__position">{{ position }}</div>
+      <p class="header__position">{{ position }}</p>
     </div>
   </header>
 </template>
@@ -24,34 +30,40 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  // flex-basis: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: $header-size;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: $pm-left;
+  right: $pm-left;
 
-  &__wrap {
+  &__photo {
+    img {
+      $size: 150px;
+      width: $size - 10px;
+      height: $size - 10px;
+      border-radius: $size;
+    }
+  }
+  &__name-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: $padding;
-
+    width: calc(65vw - #{$pm-left} - #{$padding});
     background: c(header);
     border: $border;
-    width: 60vw;
   }
   &__name,
   &__position {
     margin: 0;
-    // text-transform: uppercase;
   }
   &__position {
-    // margin: 0;
+    text-transform: uppercase;
+    margin: 0;
   }
 }
 </style>
