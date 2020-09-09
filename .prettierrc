@@ -2,5 +2,6 @@
   "arrowParens": "avoid",
   "semi": true,
   "singleQuote": true,
-  "jsxBracketSameLine": false
+  "jsxBracketSameLine": false,
+  "trailingComma": "es5"
 }
