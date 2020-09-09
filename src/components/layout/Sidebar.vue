@@ -8,13 +8,21 @@
 <script>
 import ContactInfo from '../content/ContactInfo';
 import Skills from '../content/Skills';
+import { address, phone, email, skills } from '../../data';
 
 export default {
-  props: ['address', 'phone', 'email', 'skills'],
-
   components: {
     ContactInfo,
     Skills,
+  },
+
+  data() {
+    return {
+      address: address,
+      phone: phone,
+      email: email,
+      skills: skills,
+    };
   },
 };
 </script>

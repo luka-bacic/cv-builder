@@ -1,12 +1,7 @@
 <template>
   <div id="app">
     <Header :name="name" :position="job" />
-    <Sidebar
-      :address="address"
-      :phone="phone"
-      :email="email"
-      :skills="skills"
-    />
+    <Sidebar />
     <Main />
   </div>
 </template>
@@ -17,7 +12,7 @@ import Header from './components/layout/Header';
 import Main from './components/layout/Main';
 import Sidebar from './components/layout/Sidebar';
 
-import { name, job, address, phone, email, skills } from './data';
+import { name, job } from './data';
 
 export default {
   name: 'App',
@@ -25,10 +20,6 @@ export default {
     return {
       name: name,
       job: job,
-      address: address,
-      phone: phone,
-      email: email,
-      skills: skills,
     };
   },
   components: { Main, Sidebar, Header },
