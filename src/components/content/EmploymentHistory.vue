@@ -56,6 +56,15 @@ export default {
     font-weight: 300;
   }
 
+  &__city {
+    margin-left: 100px;
+    flex-shrink: 0;
+  }
+
+  &__date {
+    margin-top: 0.25rem;
+  }
+
   &__duties {
     margin: 0.5rem 0 0;
     font-size: 0.9rem;

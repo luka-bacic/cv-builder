@@ -20,6 +20,19 @@ export const skills = [
   },
 ];
 
+export const languages = [
+  {
+    name: 'English',
+    xp: 5,
+  },
+  {
+    name: 'Serbian',
+    xp: 5,
+  },
+];
+
+export const hobbies = 'Swimming, reading, cooking, turtle breeding';
+
 // Summary, first section on the right hand side
 export const profile =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
@@ -30,7 +43,17 @@ export const work = [
     position: 'Web dev',
     company: 'Cordelta',
     city: 'Canberra',
-    date: 'March 2020 - present',
+    date: 'March 2020 — present',
     duties: ['one', 'two', 'three'],
+  },
+];
+
+// Education
+export const schools = [
+  {
+    degree: 'Bachelor of Information Technology',
+    institution: 'Australian National University',
+    city: 'Canberra',
+    date: 'July 2014 — June 2015',
   },
 ];

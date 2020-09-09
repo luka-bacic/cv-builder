@@ -1,6 +1,6 @@
 <template>
   <div class="skill-group">
-    <h2>Skills</h2>
+    <h2>{{ title }}</h2>
 
     <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
       <p class="skill-group__skill-name">{{ item.name }}</p>
@@ -19,6 +19,11 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      required: true,
+      default: 'Skill group title',
+    },
     skills: {
       type: Array,
       required: true,

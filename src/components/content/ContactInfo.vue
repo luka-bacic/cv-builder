@@ -1,15 +1,15 @@
 <template>
-  <div class="info">
+  <div class="info smaller">
     <h2>Info</h2>
 
     <h3>Address</h3>
     <p>{{ address }}</p>
 
     <h3>Phone</h3>
-    <p>{{ phone }}</p>
+    <p class="info__phone">{{ phone }}</p>
 
     <h3>Email</h3>
-    <p>{{ email }}</p>
+    <p class="info__email">{{ email }}</p>
   </div>
 </template>
 
@@ -36,5 +36,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* prettier-ignore */
+.info {
+  p {
+    // font-size: 0.8rem;
+  }
+
+  &__email {
+    letter-spacing: 0.05rem;
+  }
+
+  &__phone {
+    letter-spacing: 0.1rem;
+  }
+}
 </style>

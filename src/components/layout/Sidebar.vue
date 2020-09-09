@@ -1,19 +1,23 @@
 <template>
-  <aside class="sidebar">
+  <aside class="sidebar ">
     <ContactInfo :address="address" :phone="phone" :email="email" />
-    <Skills :skills="skills" />
+    <SkillGroup title="Skills" :skills="skills" />
+    <SkillGroup title="Languages" :skills="languages" />
+    <Hobbies />
   </aside>
 </template>
 
 <script>
 import ContactInfo from '../content/ContactInfo';
-import Skills from '../content/Skills';
-import { address, phone, email, skills } from '../../data';
+import SkillGroup from '../reusable/SkillGroup';
+import Hobbies from '../content/Hobbies';
+import { address, phone, email, skills, languages } from '../../data';
 
 export default {
   components: {
     ContactInfo,
-    Skills,
+    SkillGroup,
+    Hobbies,
   },
 
   data() {
@@ -22,6 +26,7 @@ export default {
       phone: phone,
       email: email,
       skills: skills,
+      languages: languages,
     };
   },
 };
@@ -29,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
-  flex: 0 0 30%;
+  flex: 0 0 35%;
   padding-left: $pm-left;
   padding-right: $padding;
   background: c(sidebar);
