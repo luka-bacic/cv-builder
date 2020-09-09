@@ -28,9 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  // font-family: sans-serif;
-
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   // border: 1px solid red;
   display: flex;
