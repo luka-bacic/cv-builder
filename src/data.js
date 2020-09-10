@@ -11,23 +11,47 @@ export const email = 'luka.bacic278@gmail.com';
 
 export const skills = [
   {
-    name: 'Something',
-    xp: 5,
+    name: 'Vue',
+    xp: 9,
   },
   {
-    name: 'Else',
-    xp: 2,
+    name: 'React',
+    xp: 8,
+  },
+  {
+    name: 'Cross-browser development',
+    xp: 9,
+  },
+  {
+    name: 'Mobile first responsive development',
+    xp: 10,
+  },
+  {
+    name: 'WCAG 2.1 Accessibility guidelines',
+    xp: 7,
+  },
+  {
+    name: 'Modern JavaScript',
+    xp: 9,
+  },
+  {
+    name: 'CSS / SASS / SCSS',
+    xp: 10,
+  },
+  {
+    name: 'Writing documentation',
+    xp: 10,
   },
 ];
 
 export const languages = [
   {
-    name: 'English',
-    xp: 5,
+    name: 'Serbian / Croatian',
+    xp: 10,
   },
   {
-    name: 'Serbian',
-    xp: 5,
+    name: 'English',
+    xp: 9,
   },
 ];
 
@@ -58,13 +82,13 @@ export const work = [
     duties: [
       'Accept and sort donations',
       'Greet and instruct customers',
-      'Clean facility',
+      'Clean the facility',
     ],
   },
   {
     position: 'Freelance web developer',
     company: null,
-    city: null,
+    city: 'Online',
     date: 'September 2019 — present',
     duties: ['Develop custom WordPress themes'],
   },
