@@ -4,7 +4,7 @@
       <ContactInfo :address="address" :phone="phone" :email="email" />
       <SkillGroup title="Skills" :skills="skills" />
       <SkillGroup title="Languages" :skills="languages" />
-      <Hobbies />
+      <Hobbies :hobbies="hobbies" />
     </div>
     <div class="sidebar__bgcolor"></div>
   </aside>
@@ -14,7 +14,7 @@
 import ContactInfo from '../content/ContactInfo';
 import SkillGroup from '../reusable/SkillGroup';
 import Hobbies from '../content/Hobbies';
-import { address, phone, email, skills, languages } from '../../data';
+import { address, phone, email, skills, languages, hobbies } from '../../data';
 
 export default {
   components: {
@@ -30,6 +30,7 @@ export default {
       email: email,
       skills: skills,
       languages: languages,
+      hobbies: hobbies,
     };
   },
 };
