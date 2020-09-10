@@ -1,10 +1,7 @@
 <template>
   <header class="header">
     <div class="header__photo">
-      <img
-        src="https://i.picsum.photos/id/866/150/150.jpg?hmac=p6Qy476cgeZxVZMIFJmLW3x8SQSjGCkjzoPEKAKQ1Os"
-        alt=""
-      />
+      <img src="../../assets/img/profile.jpg" alt="" />
     </div>
     <div class="header__name-box">
       <h1 class="header__name">{{ name }}</h1>
