@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .sidebar {
   flex: 0 0 35%;
-  padding-left: $pm-left;
+  padding-left: $pm;
   padding-right: $padding;
   padding-top: $header-size;
 

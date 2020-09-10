@@ -36,8 +36,9 @@ export default {
   height: $header-size;
   position: absolute;
   top: 0;
-  left: $pm-left;
-  right: $pm-left;
+  left: $pm;
+  right: $pm;
+  z-index: 10;
 
   &__photo {
     img {
@@ -47,20 +48,23 @@ export default {
       border-radius: $size;
     }
   }
+
   &__name-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: $padding;
-    width: calc(65vw - #{$pm-left} - #{$padding});
+    width: calc(65vw - #{$pm} - #{$padding});
     background: c(header);
     border: $border;
   }
+
   &__name,
   &__position {
     margin: 0;
   }
+
   &__position {
     text-transform: uppercase;
     margin: 0;

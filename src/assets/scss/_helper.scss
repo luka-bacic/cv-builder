@@ -2,3 +2,29 @@
 .smaller p {
   font-size: 0.7rem;
 }
+
+.item-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  line-height: 24px;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.item-date,
+.item-city {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.item-city {
+  margin-left: 1cm;
+  flex-shrink: 0;
+}
+
+.item-date {
+  margin-top: 0.25rem;
+}

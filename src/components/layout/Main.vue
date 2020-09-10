@@ -27,11 +27,34 @@ export default {
 <style lang="scss" scoped>
 .main-content {
   flex: 0 0 65%;
-  // border: 1px solid red;
   background: c(main);
-  // margin-top: -$header-size;
   padding-top: $header-size;
   padding-left: $padding;
-  padding-right: $pm-left;
+  padding-right: $pm;
+}
+</style>
+
+<style lang="scss">
+.main-content > div {
+  margin-top: $pm-sm;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  > div {
+    @media print {
+      page-break-inside: avoid;
+
+      &.education__school,
+      &.history__employment {
+        padding-top: $pm-sm;
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+      }
+    }
+  }
 }
 </style>

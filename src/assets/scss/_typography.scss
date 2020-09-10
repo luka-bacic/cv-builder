@@ -20,6 +20,7 @@ h2 {
   letter-spacing: 0.2rem;
   border-bottom: $border;
   padding-bottom: $heading-bottom-padding;
+  font-weight: 600;
 }
 
 h3 {
@@ -28,8 +29,9 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
+  font-weight: 500;
 }
 
 p {

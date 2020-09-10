@@ -3,17 +3,15 @@
     <h2>Education</h2>
 
     <div v-for="(item, i) in schools" :key="i" class="education__school">
-      <div class="education__top">
-        <h4 class="education__degree">
-          {{ item.degree }}, {{ item.institution }}
-        </h4>
+      <div class="item-heading">
+        <h4>{{ item.degree }}, {{ item.institution }}</h4>
 
-        <div class="education__city">
+        <div class="item-city">
           {{ item.city }}
         </div>
       </div>
 
-      <div class="education__date">
+      <div class="item-date">
         {{ item.date }}
       </div>
     </div>
@@ -33,37 +31,5 @@ export default {
 
 <style lang="scss" scoped>
 .education {
-  &__school {
-    &:first-of-type {
-      h4 {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    h4 {
-      margin-bottom: 0;
-    }
-  }
-
-  &__date,
-  &__city {
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-
-  &__city {
-    margin-left: 100px;
-    flex-shrink: 0;
-  }
-
-  &__date {
-    margin-top: 0.25rem;
-  }
 }
 </style>

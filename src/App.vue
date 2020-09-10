@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// require('typeface-montserrat');
 import 'sanitize.css';
 import Header from './components/layout/Header';
 import Main from './components/layout/Main';
@@ -26,9 +27,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #app {
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-wrap: wrap;
 }
