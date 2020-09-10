@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :name="name" :position="job" />
+    <Header :name="name" :position="job" :photoName="pfp" />
     <Sidebar />
     <Main />
   </div>
@@ -13,7 +13,7 @@ import Header from './components/layout/Header';
 import Main from './components/layout/Main';
 import Sidebar from './components/layout/Sidebar';
 
-import { name, job } from './data';
+import { name, job, photoName } from './data';
 
 export default {
   name: 'App',
@@ -21,6 +21,7 @@ export default {
     return {
       name: name,
       job: job,
+      pfp: photoName,
     };
   },
   components: { Main, Sidebar, Header },
