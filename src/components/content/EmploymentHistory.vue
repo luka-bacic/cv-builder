@@ -4,7 +4,7 @@
 
     <div v-for="(item, i) in data" :key="i" class="history__employment">
       <div class="item-heading">
-        <h4>{{ item.position }}, {{ item.company }}</h4>
+        <h4>{{ item.position }}{{ item.company && `, ${item.company}` }}</h4>
         <div class="item-city">{{ item.city }}</div>
       </div>
 
