@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .hobbies {
   h2 {
-    margin-top: 2rem;
+    margin-top: 0;
   }
 }
 </style>

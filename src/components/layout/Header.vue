@@ -58,6 +58,7 @@ export default {
     width: calc(65vw - #{$pm} - #{$padding});
     background: c(header);
     border: $border;
+    line-height: 1;
   }
 
   &__name,
@@ -67,7 +68,7 @@ export default {
 
   &__position {
     text-transform: uppercase;
-    margin: 0;
+    margin-top: 1rem;
   }
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <aside class="sidebar ">
+    <div class="sidebar__bgcolor"></div>
     <div class="sidebar__content">
       <ContactInfo :address="address" :phone="phone" :email="email" />
       <SkillGroup title="Skills" :skills="skills" />
       <SkillGroup title="Languages" :skills="languages" />
       <Hobbies :hobbies="hobbies" />
     </div>
-    <div class="sidebar__bgcolor"></div>
   </aside>
 </template>
 
@@ -63,6 +63,16 @@ export default {
       background-color: unset;
       // 1000px is a random high number that is definitely larger than the box dimension
       box-shadow: inset 0 0 0 1000px c(sidebar);
+    }
+
+    &__content > div {
+      page-break-inside: avoid;
+
+      padding-top: $pm-sm;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
     }
   }
 }

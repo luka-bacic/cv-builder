@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-group">
+  <div class="skill-group smaller">
     <h2>{{ title }}</h2>
 
     <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
@@ -44,10 +44,13 @@ export default {
 <style lang="scss" scoped>
 .skill-group {
   h2 {
-    margin-top: 2rem;
+    margin-top: 0;
   }
   &__skill-name {
     margin-bottom: 0.5rem;
+    // word-break: break-word;
+    // overflow-wrap: break-word;
+    // white-space: pre-wrap;
   }
 
   &__xp {
@@ -56,13 +59,17 @@ export default {
   }
 
   &__xp-circle {
-    $size: 10px;
+    $size: 9px;
 
     margin-right: $size;
     width: $size;
     height: $size;
     background: c('black');
     border-radius: $size;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   @media print {
