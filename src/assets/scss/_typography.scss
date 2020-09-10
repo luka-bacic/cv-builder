@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+// If the font is included by @import in css or with the <link> tag, the text
+// in the pdf will not be selectable. To resolve this, you will need to
+// download the .zip file and install the font you want to use on your machine
+// https://fonts.google.com/specimen/Montserrat
+//
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
 
 h1,
 h2,
