@@ -29,8 +29,8 @@ export default {
       required: true,
       default: function() {
         return [
-          { name: '1st skill', xp: 5 },
-          { name: '2nd skill', xp: 4 },
+          { name: 'First item', xp: 10 },
+          { name: 'Second item', xp: 7 },
         ];
       },
       // validator: function(value) {

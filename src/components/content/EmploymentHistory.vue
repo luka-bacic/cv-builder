@@ -2,7 +2,7 @@
   <div class="history">
     <h2>Employment history</h2>
 
-    <div v-for="(item, i) in data" :key="i" class="history__employment">
+    <div v-for="(item, i) in jobs" :key="i" class="history__employment">
       <div class="item-heading">
         <h4>{{ item.position }}{{ item.company && `, ${item.company}` }}</h4>
         <div class="item-city">{{ item.city }}</div>
@@ -22,9 +22,20 @@
 <script>
 export default {
   props: {
-    data: {
+    jobs: {
       type: Array,
       required: true,
+      default() {
+        return [
+          {
+            position: 'Captain',
+            company: 'Overwatch',
+            city: 'Bern',
+            date: 'November 2030 — January 2050',
+            duties: ['Second in command', 'Sharpshooter'],
+          },
+        ];
+      },
     },
   },
 };

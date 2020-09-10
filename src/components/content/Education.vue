@@ -24,6 +24,16 @@ export default {
     schools: {
       type: Array,
       required: true,
+      default() {
+        return [
+          {
+            degree: 'Ranged combat',
+            institution: 'Military school',
+            city: 'Cairo',
+            date: 'September 2025 — June 2030',
+          },
+        ];
+      },
     },
   },
 };

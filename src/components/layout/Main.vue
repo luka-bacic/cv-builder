@@ -1,7 +1,7 @@
 <template>
   <main class="main-content">
     <Summary :text="profileSummary" />
-    <EmploymentHistory :data="workHistory" />
+    <EmploymentHistory :jobs="workHistory" />
     <Education :schools="education" />
   </main>
 </template>

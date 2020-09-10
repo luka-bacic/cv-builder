@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__photo">
-      <img src="../../assets/img/profile.jpg" alt="" />
+      <img :src="require(`@/assets/img/${photoName}`)" />
     </div>
     <div class="header__name-box">
       <h1 class="header__name">{{ name }}</h1>
@@ -20,6 +20,13 @@ export default {
     },
     position: {
       type: String,
+      required: true,
+      default: 'Bounty hunter',
+    },
+    photoName: {
+      type: String,
+      required: true,
+      default: 'ana-amari.png',
     },
   },
 };
