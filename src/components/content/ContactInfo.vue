@@ -1,15 +1,33 @@
 <template>
   <div class="info smaller">
-    <h2>Info</h2>
+    <h2 v-if="address || phone || email || linkedIn || github">
+      Info
+    </h2>
 
-    <h3>Address</h3>
-    <p>{{ address }}</p>
+    <div v-if="address">
+      <h3>Address</h3>
+      <p>{{ address }}</p>
+    </div>
 
-    <h3>Phone</h3>
-    <p class="info__phone">{{ phone }}</p>
+    <div v-if="phone">
+      <h3>Phone</h3>
+      <p class="info__phone">{{ phone }}</p>
+    </div>
 
-    <h3>Email</h3>
-    <p class="info__email">{{ email }}</p>
+    <div v-if="email">
+      <h3>Email</h3>
+      <a :href="`mailto:${email}`" class="info__email">{{ email }}</a>
+    </div>
+
+    <div v-if="linkedIn">
+      <h3>LinkedIn</h3>
+      <a :href="linkedIn" class="info__linkedin">{{ linkedIn }}</a>
+    </div>
+
+    <div v-if="github">
+      <h3>GitHub</h3>
+      <a :href="github" class="info__github">{{ github }}</a>
+    </div>
   </div>
 </template>
 
@@ -31,18 +49,22 @@ export default {
       required: true,
       default: 'ana.amari@overwatch.org',
     },
+    linkedIn: {
+      type: String,
+    },
+    github: {
+      type: String,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .info {
-  p {
-    // font-size: 0.8rem;
-  }
-
-  &__email {
-    letter-spacing: 0.05rem;
+  &__email,
+  &__linkedin,
+  &__github {
+    letter-spacing: 0.01rem;
   }
 
   &__phone {

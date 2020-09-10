@@ -2,7 +2,13 @@
   <aside class="sidebar ">
     <div class="sidebar__bgcolor"></div>
     <div class="sidebar__content">
-      <ContactInfo :address="address" :phone="phone" :email="email" />
+      <ContactInfo
+        :address="address"
+        :phone="phone"
+        :email="email"
+        :linkedIn="linkedIn"
+        :github="github"
+      />
       <SkillGroup title="Skills" :skills="skills" />
       <SkillGroup title="Languages" :skills="languages" />
       <Hobbies :hobbies="hobbies" />
@@ -14,7 +20,16 @@
 import ContactInfo from '../content/ContactInfo';
 import SkillGroup from '../reusable/SkillGroup';
 import Hobbies from '../content/Hobbies';
-import { address, phone, email, skills, languages, hobbies } from '../../data';
+import {
+  address,
+  phone,
+  email,
+  linkedIn,
+  github,
+  skills,
+  languages,
+  hobbies,
+} from '../../data';
 
 export default {
   components: {
@@ -31,6 +46,8 @@ export default {
       skills: skills,
       languages: languages,
       hobbies: hobbies,
+      linkedIn: linkedIn,
+      github: github,
     };
   },
 };
@@ -46,6 +63,14 @@ export default {
   &__content {
     position: relative;
     z-index: 10;
+
+    > div {
+      padding-top: 1.2rem;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
   }
 
   &__bgcolor {

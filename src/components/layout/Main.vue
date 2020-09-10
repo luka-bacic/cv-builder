@@ -36,13 +36,22 @@ export default {
 
 <style lang="scss">
 .main-content > div {
-  margin-top: $pm-sm;
+  padding-top: $pm-sm;
 
   &:first-of-type {
-    margin-top: 0;
+    padding-top: 0;
   }
 
   > div {
+    &.education__school,
+    &.history__employment {
+      padding-top: 1.2rem;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
+
     @media print {
       page-break-inside: avoid;
 
