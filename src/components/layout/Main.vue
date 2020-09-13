@@ -47,7 +47,8 @@ export default {
 
   > div {
     &.education__school,
-    &.history__employment {
+    &.history__employment,
+    &.volunteer__xp {
       padding-top: 1.2rem;
 
       &:first-of-type {
@@ -59,7 +60,8 @@ export default {
       page-break-inside: avoid;
 
       &.education__school,
-      &.history__employment {
+      &.history__employment,
+      &.volunteer__xp {
         padding-top: $pm-sm;
 
         &:first-of-type {
