@@ -2,6 +2,7 @@
   <main class="main-content">
     <Summary :text="profileSummary" />
     <EmploymentHistory :jobs="workHistory" />
+    <Volunteering :volunteering="volunteering" />
     <Education :schools="education" />
   </main>
 </template>
@@ -9,16 +10,18 @@
 <script>
 import Summary from '../content/Summary';
 import EmploymentHistory from '../content/EmploymentHistory';
+import Volunteering from '../content/Volunteering';
 import Education from '../content/Education';
 
-import { profile, work, schools } from '../../data';
+import { profile, work, schools, volunteering } from '../../data';
 export default {
-  components: { Summary, EmploymentHistory, Education },
+  components: { Summary, EmploymentHistory, Volunteering, Education },
   data() {
     return {
       profileSummary: profile,
       workHistory: work,
       education: schools,
+      volunteering: volunteering,
     };
   },
 };

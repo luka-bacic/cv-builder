@@ -51,3 +51,6 @@ export const schools = undefined;
 
 // Will be appended to `@/assets/img/`
 export const photoName = undefined;
+
+// Volunteer experience
+export const volunteering = undefined;
