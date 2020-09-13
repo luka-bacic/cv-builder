@@ -50,7 +50,10 @@ export default {
   // These rules can be removed, depending how long the employment history section is long
   page-break-inside: avoid;
   break-inside: avoid;
-  padding-top: 0;
+
+  h2 {
+    margin-top: 0;
+  }
 
   &__duties {
     margin: 0.5rem 0 0;
