@@ -1,6 +1,6 @@
 # CV Builder
 
-Simple Vue app for generating a CV.
+Simple Vue app for generating a CV with a layout [like this](https://github.com/luka-bacic/cv-builder/blob/master/src/assets/misc/example-cv.pdf).
 
 ## How to use
 
