@@ -46,7 +46,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.history {
+.volunteer {
+  // These rules can be removed, depending how long the employment history section is long
+  page-break-inside: avoid;
+  break-inside: avoid;
+  padding-top: 0;
+
   &__duties {
     margin: 0.5rem 0 0;
     font-size: 0.9rem;
