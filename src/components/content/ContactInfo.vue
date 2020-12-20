@@ -4,11 +4,6 @@
       Info
     </h2>
 
-    <div v-if="address">
-      <h3>Address</h3>
-      <p>{{ address }}</p>
-    </div>
-
     <div v-if="phone">
       <h3>Phone</h3>
       <p class="info__phone">{{ phone }}</p>
@@ -17,6 +12,11 @@
     <div v-if="email">
       <h3>Email</h3>
       <a :href="`mailto:${email}`" class="info__email">{{ email }}</a>
+    </div>
+
+    <div v-if="address">
+      <h3>Address</h3>
+      <p>{{ address }}</p>
     </div>
 
     <div v-if="linkedIn">
