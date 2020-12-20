@@ -5,7 +5,7 @@
     <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
       <p class="skill-group__skill-name">{{ item.name }}</p>
 
-      <div class="skill-group__xp">
+      <div class="skill-group__xp" v-if="item.xp !== undefined">
         <div
           v-for="(n, j) in parseInt(item.xp)"
           :key="j"
@@ -48,6 +48,7 @@ export default {
   }
   &__skill-name {
     margin-bottom: 0.5rem;
+    font-size: 0.8rem;
     // word-break: break-word;
     // overflow-wrap: break-word;
     // white-space: pre-wrap;
