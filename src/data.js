@@ -4,16 +4,16 @@ export const profile = undefined;
 export const skills = [
   {
     name: 'Marksmanship',
-    xp: 10,
+    // xp: 10, // uncomment if you want to show your knowledge on a scale of 1 - 10
   },
   {
     name: 'Decision making',
-    xp: 10,
+    // xp: 10,
   },
-  {
-    name: 'Cooking',
-    xp: 1,
-  },
+  // {
+  //   name: 'Cooking',
+  //   xp: 1,
+  // },
 ];
 
 export const name = undefined;
@@ -33,11 +33,11 @@ export const github = undefined;
 export const languages = [
   {
     name: 'Arabic',
-    xp: 10,
+    // xp: 10, // uncomment if you want to show your knowledge on a scale of 1 - 10
   },
   {
     name: 'English',
-    xp: 10,
+    // xp: 10,
   },
 ];
 

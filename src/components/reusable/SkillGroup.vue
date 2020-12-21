@@ -5,7 +5,7 @@
     <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
       <p class="skill-group__skill-name">{{ item.name }}</p>
 
-      <div class="skill-group__xp" v-if="item.xp !== undefined">
+      <div class="skill-group__xp" v-if="typeof item.xp !== 'undefined'">
         <div
           v-for="(n, j) in parseInt(item.xp)"
           :key="j"
@@ -28,14 +28,18 @@ export default {
       type: Array,
       required: true,
       default: function() {
+        // The `xp` key is not required.
         return [
-          { name: 'First item', xp: 10 },
-          { name: 'Second item', xp: 7 },
+          {
+            name: 'First item',
+            xp: 10,
+          },
+          {
+            name: 'Second item',
+            xp: 7,
+          },
         ];
       },
-      // validator: function(value) {
-      //   value
-      // },
     },
   },
 };
