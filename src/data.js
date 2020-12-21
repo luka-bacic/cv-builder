@@ -54,3 +54,6 @@ export const photoName = undefined;
 
 // Volunteer experience
 export const volunteering = undefined;
+
+// References
+export const references = undefined;

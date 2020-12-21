@@ -2,6 +2,7 @@
   <main class="main-content">
     <Summary :text="profileSummary" />
     <EmploymentHistory :jobs="workHistory" />
+    <References :references="references" />
     <Volunteering :volunteering="volunteering" />
     <Education :schools="education" />
   </main>
@@ -12,16 +13,24 @@ import Summary from '../content/Summary';
 import EmploymentHistory from '../content/EmploymentHistory';
 import Volunteering from '../content/Volunteering';
 import Education from '../content/Education';
+import References from '../content/References';
 
-import { profile, work, schools, volunteering } from '../../data';
+import { profile, work, schools, volunteering, references } from '../../data';
 export default {
-  components: { Summary, EmploymentHistory, Volunteering, Education },
+  components: {
+    Summary,
+    EmploymentHistory,
+    Volunteering,
+    Education,
+    References,
+  },
   data() {
     return {
       profileSummary: profile,
       workHistory: work,
       education: schools,
       volunteering: volunteering,
+      references: references,
     };
   },
 };
