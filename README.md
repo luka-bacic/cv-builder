@@ -30,6 +30,14 @@ npm run serve
 
 ## Notes
 
-The generated PDF was tested in latest Chrome and Firefox on Windows 10. In Chrome it is possible that text in the generated PDF will not be selectable (it would act as an image).
+The generated PDF was tested in latest Chrome and Firefox on Windows 10. It is possible that text in the generated PDF will not be selectable (it would act as an image).
 
-This issue can be bypassed by installing the font used in the app to your machine (the default font is Montserrat) AND printing to file using Firefox instead of Chrome.
+To fix the Chrome issue:
+
+1. Installing the font used in this app to your machine (the default font is Montserrat)
+
+2. Print the page by pressing CTRL + P
+
+3. In the `Destination` dropdown, select `Save as PDF` **instead** of `Microsoft Print to PDF`
+
+It is also possible that links won't be preserved in the PDF when printing with Firefox. Unfortunately I was not able to find a workaround for this. Please use Chrome to generate the PDF
