@@ -3,6 +3,7 @@
     <h2>{{ title }}</h2>
 
     <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
+      <div v-if="item.newPage === true" class="skill-group__page-break"></div>
       <p class="skill-group__skill-name">{{ item.name }}</p>
 
       <div class="skill-group__xp" v-if="typeof item.xp !== 'undefined'">
