@@ -28,16 +28,22 @@ npm run serve
 
 6. Print page to PDF (CTRL + P in Firefox and Chrome)
 
-## Notes
+## Troubleshooting
 
-The generated PDF was tested in latest Chrome and Firefox on Windows 10. It is possible that text in the generated PDF will not be selectable (it would act as an image).
+### Text is not selectable in the generated PDF
 
-To fix the Chrome issue:
+It is possible the text in the generated PDF will not be selectable (it would act as an image).
 
-1. Installing the font used in this app to your machine (the default font is Montserrat)
+To fix this in Chrome:
+
+1. Install the font used in this app to your machine (the default font is [Montserrat](https://fonts.google.com/specimen/Montserrat))
 
 2. Print the page by pressing CTRL + P
 
 3. In the `Destination` dropdown, select `Save as PDF` **instead** of `Microsoft Print to PDF`
 
-It is also possible that links won't be preserved in the PDF when printing with Firefox. Unfortunately I was not able to find a workaround for this. Please use Chrome to generate the PDF
+For Firefox it should be enough to just complete step 1.
+
+### Links not working in the generated PDF
+
+It is also possible that links won't be preserved in the PDF when printing with Firefox. They will be styled as links, but nothing happens when they are clicked on. Unfortunately I was not able to find a workaround for this. Please use Chrome to generate the PDF
