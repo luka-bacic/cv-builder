@@ -40,7 +40,7 @@ export default {
 .main-content {
   flex: 0 0 65%;
   background: c(main);
-  padding-top: $header-size;
+  padding-top: calc(#{$header-size} - 2vh);
   padding-left: $padding;
   padding-right: $pm;
 }
@@ -57,7 +57,8 @@ export default {
   > div {
     &.education__school,
     &.history__employment,
-    &.volunteer__xp {
+    &.volunteer__xp,
+    &.references__item {
       padding-top: 1.2rem;
 
       &:first-of-type {

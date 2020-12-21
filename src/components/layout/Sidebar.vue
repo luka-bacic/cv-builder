@@ -58,7 +58,7 @@ export default {
   flex: 0 0 35%;
   padding-left: $pm;
   padding-right: $padding;
-  padding-top: $header-size;
+  padding-top: calc(#{$header-size} - 2vh);
 
   &__content {
     position: relative;

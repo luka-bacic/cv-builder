@@ -2,7 +2,7 @@
   <div class="references">
     <h2>References</h2>
 
-    <div v-for="(item, i) in references" :key="i" class="references__school">
+    <div v-for="(item, i) in references" :key="i" class="references__item">
       <div class="item-heading">
         <h4>
           {{ item.name }} <span>from</span> &nbsp;
