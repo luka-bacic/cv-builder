@@ -30,6 +30,10 @@ npm run serve
 
 ## Troubleshooting
 
+### Printed layout doesn't match the page dimensions
+
+This layout was designed for A4 paper in portrait mode. When priting the page to PDF, please make sure to select `A4` instead of `Letter` in the advanced print settings.
+
 ### Text is not selectable in the generated PDF
 
 It is possible the text in the generated PDF will not be selectable (it would act as an image).
