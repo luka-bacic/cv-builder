@@ -77,10 +77,18 @@ export default {
     }
   }
 
+  &__page-break {
+    padding-top: 1.2rem;
+  }
+
   @media print {
     &__xp-circle {
       background-color: unset;
       box-shadow: inset 0 0 0 50px c(black);
+    }
+
+    &__page-break {
+      padding-top: $pm-sm;
     }
   }
 }

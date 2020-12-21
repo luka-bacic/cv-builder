@@ -1,19 +1,21 @@
 // Summary, first section on the right hand side
 export const profile = undefined;
 
+// Optional keys:
+// `xp`     - Number in range [1 - 10] - if you want to show your knowledge on a scale of 1 - 10
+// `newPage - Boolean - set to `true` if the Skill in question wraps to a new page. This adds
+//            top padding, as it is not programatically possible to determine if an element
+//            wraps onto a new page in the print layout
 export const skills = [
   {
     name: 'Marksmanship',
-    // xp: 10, // uncomment if you want to show your knowledge on a scale of 1 - 10
+    // xp: 10, // uncomment
   },
   {
     name: 'Decision making',
     // xp: 10,
+    // newPage: true,
   },
-  // {
-  //   name: 'Cooking',
-  //   xp: 1,
-  // },
 ];
 
 export const name = undefined;
