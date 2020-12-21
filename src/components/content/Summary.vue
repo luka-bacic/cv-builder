@@ -20,5 +20,8 @@ export default {
 
 <style lang="scss" scoped>
 .summary {
+  p {
+    text-align: justify;
+  }
 }
 </style>
