@@ -9,17 +9,16 @@
         :linkedIn="linkedIn"
         :github="github"
       />
-      <SkillGroup title="Skills" :skills="skills" />
-      <SkillGroup title="Languages" :skills="languages" />
-      <Hobbies :hobbies="hobbies" />
+      <SidebarList title="Skills" :list="skills" />
+      <SidebarList title="Languages" :list="languages" />
+      <SidebarList title="Hobbies" :list="hobbies" />
     </div>
   </aside>
 </template>
 
 <script>
 import ContactInfo from '../content/ContactInfo';
-import SkillGroup from '../reusable/SkillGroup';
-import Hobbies from '../content/Hobbies';
+import SidebarList from '../reusable/SidebarList';
 import {
   address,
   phone,
@@ -34,8 +33,7 @@ import {
 export default {
   components: {
     ContactInfo,
-    SkillGroup,
-    Hobbies,
+    SidebarList,
   },
 
   data() {

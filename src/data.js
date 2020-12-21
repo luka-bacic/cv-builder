@@ -43,7 +43,14 @@ export const languages = [
   },
 ];
 
-export const hobbies = undefined;
+export const hobbies = [
+  {
+    name: 'Sleep darting genjies',
+  },
+  {
+    name: 'Healing genjies',
+  },
+];
 
 // Work experience
 export const work = undefined;

@@ -1,16 +1,16 @@
 <template>
-  <div class="skill-group smaller">
+  <div class="sidebar-list smaller">
     <h2>{{ title }}</h2>
 
-    <div v-for="(item, i) in skills" :key="i" class="skill-group__skill">
-      <div v-if="item.newPage === true" class="skill-group__page-break"></div>
-      <p class="skill-group__skill-name">{{ item.name }}</p>
+    <div v-for="(item, i) in list" :key="i" class="sidebar-list__skill">
+      <div v-if="item.newPage === true" class="sidebar-list__page-break"></div>
+      <p class="sidebar-list__item">{{ item.name }}</p>
 
-      <div class="skill-group__xp" v-if="typeof item.xp !== 'undefined'">
+      <div class="sidebar-list__xp" v-if="typeof item.xp !== 'undefined'">
         <div
           v-for="(n, j) in parseInt(item.xp)"
           :key="j"
-          class="skill-group__xp-circle"
+          class="sidebar-list__xp-circle"
         ></div>
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
       required: true,
       default: 'Skill group title',
     },
-    skills: {
+    list: {
       type: Array,
       required: true,
       default: function() {
@@ -33,11 +33,11 @@ export default {
         return [
           {
             name: 'First item',
-            xp: 10,
+            // xp: 10,
           },
           {
             name: 'Second item',
-            xp: 7,
+            // xp: 7,
           },
         ];
       },
@@ -47,11 +47,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skill-group {
+.sidebar-list {
   h2 {
     margin-top: 0;
+    page-break-inside: avoid;
   }
-  &__skill-name {
+
+  &__item {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
     // word-break: break-word;
