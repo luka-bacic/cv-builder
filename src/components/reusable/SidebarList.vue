@@ -1,5 +1,12 @@
 <template>
-  <div class="sidebar-list smaller">
+  <div
+    :class="{
+      'sidebar-list': true,
+      smaller: true,
+      'new-page': this.newPage,
+    }"
+  >
+    <div v-if="this.newPage === true" class=""></div>
     <h2>{{ title }}</h2>
 
     <div v-for="(item, i) in list" :key="i" class="sidebar-list__skill">
@@ -42,12 +49,21 @@ export default {
         ];
       },
     },
+    newPage: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .sidebar-list {
+  &.new-page {
+    page-break-inside: avoid;
+    padding-top: $pm-sm;
+  }
+
   h2 {
     margin-top: 0;
     page-break-inside: avoid;
