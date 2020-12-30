@@ -61,7 +61,7 @@ export default {
 .sidebar-list {
   &.new-page {
     page-break-inside: avoid;
-    padding-top: $pm-sm;
+    page-break-before: always;
   }
 
   h2 {
