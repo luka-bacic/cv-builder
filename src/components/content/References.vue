@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { validateUrl, validateStr } from '../../assets/js/helpers';
+
 export default {
   props: {
     references: {
@@ -41,38 +43,23 @@ export default {
       },
       validator(prop) {
         let isValid = true;
-        const stringErr =
-          'should be of type `string` in `References` component.';
-        const linkErr = 'should be a valid URL in `References` component';
-        const linkRegex = new RegExp(
-          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/gim
-        );
 
         prop.forEach(item => {
-          if (typeof item.name !== 'string') {
-            isValid = false;
-            console.error(`\`name\` ${stringErr}`);
-          }
+          isValid = validateStr(item.name, "your reference's name");
 
-          if (typeof item.company !== 'string') {
-            isValid = false;
-            console.error(`\`company\` ${stringErr}`);
-          }
+          isValid = validateStr(item.company, "your reference's company name");
 
-          if (!item.companyLink.match(linkRegex)) {
-            isValid = false;
-            console.error(`\`companyLink\` ${linkErr}`);
-          }
+          isValid = validateUrl(
+            item.companyLink,
+            'the company site in your reference'
+          );
 
-          if (typeof item.location !== 'string') {
-            isValid = false;
-            console.error(`\`location\` ${stringErr}`);
-          }
+          isValid = validateUrl(
+            item.linkToPdf,
+            'your letter of recommendation'
+          );
 
-          if (!item.linkToPdf.match(linkRegex)) {
-            isValid = false;
-            console.error(`\`linkToPdf\` ${linkErr}`);
-          }
+          isValid = validateStr(item.company, "your reference's location");
         });
 
         return isValid;

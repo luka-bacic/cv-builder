@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { validateUrl } from '../../assets/js/helpers';
+
 export default {
   props: {
     address: {
@@ -56,37 +58,13 @@ export default {
     linkedIn: {
       type: String,
       validator(value) {
-        const regex = new RegExp(
-          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/gim
-        );
-
-        const isValid = value.match(regex);
-
-        if (!isValid) {
-          console.error(
-            'Please ensure the link for your LinkedIn profile is a valid URL. Check if it includes `https`'
-          );
-        }
-
-        return isValid;
+        return validateUrl(value, 'your LinkedIn profile');
       },
     },
     github: {
       type: String,
       validator(value) {
-        const regex = new RegExp(
-          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/gim
-        );
-
-        const isValid = value.match(regex);
-
-        if (!isValid) {
-          console.error(
-            'Please ensure the link for your GitHub profile is a valid URL. Check if it includes `https`'
-          );
-        }
-
-        return isValid;
+        return validateUrl(value, 'your GitHub profile');
       },
     },
   },
