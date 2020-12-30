@@ -21,12 +21,16 @@
 
     <div v-if="linkedIn">
       <h3>LinkedIn</h3>
-      <a :href="linkedIn" class="info__linkedin">{{ linkedIn }}</a>
+      <a :href="linkedIn" class="info__linkedin">
+        {{ this.stripUrl(linkedIn) }}
+      </a>
     </div>
 
     <div v-if="github">
       <h3>GitHub</h3>
-      <a :href="github" class="info__github">{{ github }}</a>
+      <a :href="github" class="info__github">
+        {{ this.stripUrl(github) }}
+      </a>
     </div>
   </div>
 </template>
@@ -51,9 +55,45 @@ export default {
     },
     linkedIn: {
       type: String,
+      validator(value) {
+        const regex = new RegExp(
+          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/gim
+        );
+
+        const isValid = value.match(regex);
+
+        if (!isValid) {
+          console.error(
+            'Please ensure the link for your LinkedIn profile is a valid URL. Check if it includes `https`'
+          );
+        }
+
+        return isValid;
+      },
     },
     github: {
       type: String,
+      validator(value) {
+        const regex = new RegExp(
+          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/gim
+        );
+
+        const isValid = value.match(regex);
+
+        if (!isValid) {
+          console.error(
+            'Please ensure the link for your GitHub profile is a valid URL. Check if it includes `https`'
+          );
+        }
+
+        return isValid;
+      },
+    },
+  },
+  methods: {
+    // Strips URL protocol and `www.`
+    stripUrl(url) {
+      return url.replace(/^https?:\/\/|www./gi, '');
     },
   },
 };
